@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redstore E-commerce ! website Desine</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="../images/logo.png" alt="logo" width="125 px"></a>
+            </div>
+            <nav>
+                <ul id="menu-items">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="./images/cart.png" width="30px" height="30px" alt=""></a>
+            <img src="./images/menu.png" width="30px" height="30px" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+
+<!--------------------------Account-page------------------------->
+
+
+
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+            <img src="./images/image1.png" width="100%" alt="">
+            </div>
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="login()">Login</span>
+                        <span onclick="register()">Register</span>
+                        <hr id="indicator">
+                    </div>
+                    <form id="log-form">
+                        <input type="text" placeholder="Username">
+                        <input type="password" placeholder="password">
+                        <button type="submit" class="btn">Login</button>
+                        <a href="">Forgott password</a>
+                    </form>
+                    <form id="reg-form">
+                        <input type="text" placeholder="Username">
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="password">
+                        <button type="submit" class="btn">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-------------------------footer--------------------------->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download Our App for Android or ios Mobile</p>
+                    <div class="app-logo">
+                        <img src="./images/play-store.png" alt="">
+                        <img src="./images/app-store.png" alt="">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="./images/logo-white.png" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum id debitis odio laborum aperiam
+                        fuga!</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful links</h3>
+                    <ul>
+                        <li>Cuppons</li>
+                        <li>Blog posts</li>
+                        <li>Return policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Linkdin</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2022 - Radheshyam</p>
+        </div>
+    </div>
+
+    <!-- ---------------------------script------------------------ -->
+
+    <script>
+        var menu = document.getElementById('menu-items');
+        function menutoggle() {
+            if (menu.style.maxHeight == '0px') {
+                menu.style.maxHeight = '200px';
+            }
+            else {
+                menu.style.maxHeight = '0px';
+            }
+        }
+    </script>
+    <!-- --------------------------------product img script----------------- -->
+    <script>
+        var bigimg = document.getElementById('bigimg');
+        var smallimg = document.getElementsByClassName('smallimg');
+
+        smallimg[0].onclick = function () {
+            bigimg.src = smallimg[0].src;
+        }
+        smallimg[1].onclick = function () {
+            bigimg.src = smallimg[1].src;
+        }
+        smallimg[2].onclick = function () {
+            bigimg.src = smallimg[2].src;
+        }
+        smallimg[3].onclick = function () {
+            bigimg.src = smallimg[3].src;
+        }
+    </script>
+    <!-- -----------------------------scriptForAccount---------------------------->
+    <script>
+        var log=document.getElementById('log-form');
+        var reg=document.getElementById('reg-form');
+        var ind=document.getElementById('indicator');
+        
+        function register(){
+            reg.style.transform="translateX(0px)"
+            log.style.transform="translateX(0px)"
+            ind.style.transform="translateX(100px)"
+        }
+        function login(){
+            reg.style.transform="translateX(300px)"
+            log.style.transform="translateX(300px)"
+            ind.style.transform="translateX(0px)"
+        }
+
+    </script>
+</body>
+
+
+<!-- function login(){
+            reg.style.left="300px"
+            log.style.left="0px"
+            reg.style.zIndex="1"
+           
+        }
+        function register(){
+            log.style.left="-300px"
+            reg.style.left="0px"
+            log.style.zIndex="1"
+        } -->
+</html>
